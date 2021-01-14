@@ -1,7 +1,11 @@
 @import '@/assets/style/reset/reset.scss';
 @import '@/assets/style/reset/bootstrap-grid.scss';
 @import '@/assets/style/scss/theme.scss';
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+h1{
+    font-size: 1.2rem;
+}
 
 button{
     display: flex;

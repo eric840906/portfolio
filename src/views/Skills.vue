@@ -13,64 +13,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="col-md-6">
-      <div class="skill-card">
-        <h1>Frontend</h1>
-        <div class="skill-tags">
-          <div class="col-4">
-            <div class="skill-tag">
-              <div class="icon javascript-icon"></div>
-              <p>Javascript</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="skill-tag">
-              <div class="icon html-icon"></div>
-              <p>HTML</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="skill-tag">
-              <div class="icon css-icon"></div>
-              <p>CSS</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="skill-tag">
-              <div class="icon jquery-icon"></div>
-              <p>JQuery</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="skill-tag">
-              <div class="icon sass-icon"></div>
-              <p>Scss</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="skill-tag">
-              <div class="icon vue-icon"></div>
-              <p>Vue.js</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="skill-card">
-        <h1>Framework</h1>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="skill-card">
-        <h1>Dev tool</h1>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="skill-card">
-        <h1>Design tool</h1>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -174,12 +116,10 @@ export default {
   flex-wrap: wrap;
   padding: 20px;
   .skill-card{
-    color: #2830ba8f;
     display: flex;
     flex-direction: column;
     min-height: 300px;
     h1{
-      font-size: 1.2rem;
       font-weight: bolder;
     }
     .skill-tags{

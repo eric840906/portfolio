@@ -120,6 +120,7 @@ export default {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  color: #0000006e;
   .glass-window{
     margin: auto;
     border: 1px solid #ffffff54;
