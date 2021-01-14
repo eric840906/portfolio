@@ -1,0 +1,30 @@
+@import '@/assets/style/reset/reset.scss';
+@import '@/assets/style/reset/bootstrap-grid.scss';
+@import '@/assets/style/scss/theme.scss';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');;
+
+button{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000012;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(-96deg, #cfeaff, #0082c673), linear-gradient(15deg, #416ad3c2, #000000);
+    border-radius: 100px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: $more-darker-background-text;
+    background-image: linear-gradient(-96deg, #dbdbdb, #0082c673), linear-gradient(15deg, #416ad3c2, #000000);
+}
