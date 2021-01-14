@@ -65,7 +65,7 @@ export default {
     },
     {
       opacity: 0,
-      y: '-800',
+      y: '-1000',
       x: Math.PI * 2,
       rotate: 180,
       modifiers: {
@@ -93,7 +93,7 @@ export default {
     },
     {
       opacity: 0,
-      y: '-800',
+      y: '-900',
       x: Math.PI * 2,
       rotate: 250,
       modifiers: {
@@ -125,7 +125,6 @@ export default {
     border: 1px solid #ffffff54;
     background-clip: padding-box;
     box-shadow: 10px 10px 10px #0000002b;
-    padding: 20px;
     z-index: 999;
     backdrop-filter: blur(5px);
     border-radius: 10px;
@@ -134,6 +133,9 @@ export default {
     width: 90%;
     margin-top: 3vh;
     overflow: auto;
+    @media (max-width: 425px) {
+      width: 99%
+    }
   }
   .bubble{
     background-image: linear-gradient(-96deg, white, #0082c673), linear-gradient(15deg, #fbfeff, #4636ff);
@@ -156,11 +158,11 @@ export default {
   }
 }
 .switch-enter-active, .switch-leave-active {
-  transition: all .3s ease;
+  transition: all 1s ease;
 }
 .switch-enter, .switch-leave-to{
   opacity: 0;
-  transform: translateY(-10%);
+  transform: translateY(5%);
 }
 .switch-enter-to, .switch-leave{
   opacity: 1;

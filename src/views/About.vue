@@ -1,18 +1,20 @@
 <template>
   <div class="about">
-    <div class="name-card">
-      <img src="../assets/image/topPic.png" id="my-pic" alt="">
-      <div class="social-media">
-        <a class="media-icon" v-for="item in socialMedia" :href="item.link" :key="item.link">
-          <component :is="item.icon"/>
+    <div class="page">
+      <div class="name-card">
+        <img src="../assets/image/topPic.png" id="my-pic" alt="">
+        <div class="social-media">
+          <a class="media-icon" v-for="item in socialMedia" :href="item.link" :key="item.link">
+            <component :is="item.icon"/>
+          </a>
+        </div>
+        <h1 id="my-name">Eric Chiu</h1>
+        <p id="my-position">Front-end Engineer</p>
+        <a href="mailto:eric840906@hotmail.com.tw" id="my-email">
+          <email-icon/>
+          eric840906@hotmail.com.tw
         </a>
       </div>
-      <h1 id="my-name">Eric Chiu</h1>
-      <p id="my-position">Front-end Engineer</p>
-      <a href="mailto:eric840906@hotmail.com.tw" id="my-email">
-        <email-icon/>
-        eric840906@hotmail.com.tw
-      </a>
     </div>
   </div>
 </template>
@@ -63,6 +65,8 @@ export default {
 @import '@/assets/style/scss/mixin.scss';
 .about{
   @include router-theme(column, center, center);
+  position: fixed;
+  width: 100%;
 }
 .name-card{
   display: flex;

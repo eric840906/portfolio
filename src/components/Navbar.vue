@@ -46,8 +46,11 @@ export default {
     }
     .nav-link{
       font-weight: bolder;
-      font-size: 18px;
+      font-size: 1.5rem;
       color: #0000006e;
+      @media (max-width: 425px) {
+        font-size: 15px;
+      }
       &::after{
         content: '';
         width: 0px;
