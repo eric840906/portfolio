@@ -107,9 +107,22 @@ export default {
         repeat: -1
       }
     })
+  },
+  watch: {
+    $route (to, from) {
+      document.querySelector('.glass-window').style.overflow = 'hidden'
+      console.log('hidden now')
+    }
+  },
+  updated () {
+    setTimeout(() => {
+      document.querySelector('.glass-window').style.overflow = 'auto'
+      console.log('set to visible')
+    }, 1300)
   }
 }
 </script>
+
 <style lang="scss">
 @import '@/assets/style/scss/main.scss';
 #app {

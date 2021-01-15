@@ -4,16 +4,13 @@
       <nav class="nav-bar">
         <ul class="nav-links">
           <li>
-            <router-link ref="link" class="nav-link" to="/about">About</router-link>
+            <router-link ref="link" class="nav-link" to="/">About</router-link>
           </li>
           <li>
             <router-link ref="link" class="nav-link" to="/skills">Skills</router-link>
           </li>
           <li>
             <router-link ref="link" class="nav-link" to="/projects">Projects</router-link>
-          </li>
-          <li>
-            <router-link ref="link" class="nav-link" to="/">Contact</router-link>
           </li>
         </ul>
       </nav>
@@ -66,7 +63,7 @@ export default {
       &:hover{
         &::after{
           content: '';
-          width: 40px;
+          width: 50%;
         }
       }
     }
@@ -74,7 +71,7 @@ export default {
       color: #2830ba8f;
       &::after{
         content: '';
-        width: 40px;
+        width: 90% !important;
         height: 2px;
         background: #2830ba8f;
         position: absolute;

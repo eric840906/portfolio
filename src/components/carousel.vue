@@ -1,24 +1,24 @@
 <template>
   <div class="project-pic">
-    <img :src="projectImage[picSelector]" alt="">
-    <div class="control" v-if="screenSize > 425">
-      <h2>More pictures</h2>
+    <img class="display-pic" v-if="screenSize > 768" :src="projectImage[picSelector]" alt="">
+    <div class="control">
+      <h2>Preview</h2>
       <div class="arrow-box">
         <button @click.prevent="scrollLeft"><left-arrow :fillColor="iconColor"/></button>
         <button @click.prevent="scrollRight"><right-arrow :fillColor="iconColor"/></button>
       </div>
     </div>
-    <div v-if="screenSize > 425" class="pic-carousel" ref="carousel">
+    <div class="pic-carousel" ref="carousel">
       <div class="col-md-4" v-for="(item, index) in projectImage" :key="item">
-        <img :src="item" alt="" @click="choosePic(index)">
+        <img class="carousel-pic" :src="item" alt="" @click="choosePic(index)">
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import leftArrow from 'vue-material-design-icons/ArrowLeftDropCircleOutline.vue'
-import rightArrow from 'vue-material-design-icons/ArrowRightDropCircleOutline.vue'
+import leftArrow from 'vue-material-design-icons/ChevronLeft.vue'
+import rightArrow from 'vue-material-design-icons/ChevronRight.vue'
 export default {
   components: {
     leftArrow,
@@ -97,7 +97,8 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
   img{
-    width: 100%;
+    width: 80%;
+    align-self: center;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -118,13 +119,16 @@ export default {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
+    @media (max-width: 768px) {
+      overflow: auto;
+    }
     .col-md-4{
       @media (max-width: 768px) {
         flex: 0 0 100%;
         display: flex;
         justify-content: center;
         img{
-          width: 60%;
+          width: 100%;
         }
       }
     }

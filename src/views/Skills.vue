@@ -100,7 +100,7 @@ export default {
     ]
   }),
   mounted () {
-    gsap.from('.skill-tag', { duration: 1, y: 'random(-100%, 100%)', opacity: 0, stagger: 0.33 })
+    gsap.from('.skill-tag', { duration: 0.5, y: 'random(-100%, 100%)', opacity: 0, stagger: 0.33 })
     gsap.from('.skill-card h1', { opacity: 0, stagger: 0.33 })
   }
 }
