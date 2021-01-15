@@ -63,7 +63,7 @@ export default {
           repo: 'https://github.com/eric840906/vuecli3Project1',
           demo: 'https://eric840906.github.io/vuecli3Project1/#/home'
         },
-        image: [require('../assets/image/Lac1.png'), require('../assets/image/Lac2.png'), require('../assets/image/Lac3.png'), require('../assets/image/Lac4.png'), require('../assets/image/Lac5.png'), require('../assets/image/Lac6.png')]
+        image: ['https://imgur.com/hik8jMn.png', 'https://imgur.com/KcjvIIs.png', 'https://imgur.com/IBeISrh.png', 'https://imgur.com/0lQaUGa.png', 'https://imgur.com/yC9JGlz.png', 'https://imgur.com/eNu9eBZ.png']
       },
       {
         name: 'Whelper',
@@ -94,7 +94,7 @@ export default {
           repo: 'https://github.com/eric840906/WeightHelper',
           demo: 'https://eric840906.github.io/WeightHelper/'
         },
-        image: [require('../assets/image/wh1.png'), require('../assets/image/wh2.png'), require('../assets/image/wh3.png'), require('../assets/image/wh4.png'), require('../assets/image/wh5.png'), require('../assets/image/wh6.png')]
+        image: ['https://imgur.com/18CtN7H.png', 'https://imgur.com/M7IrVge.png', 'https://imgur.com/ro20XSa.png', 'https://imgur.com/54CnE4P.png', 'https://imgur.com/0LmnSFK.png', 'https://imgur.com/M7UvICE.png']
       }
     ]
   }),
