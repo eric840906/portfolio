@@ -96,6 +96,25 @@ export default {
           demo: 'https://eric840906.github.io/WeightHelper/'
         },
         image: ['https://imgur.com/18CtN7H.png', 'https://imgur.com/M7IrVge.png', 'https://imgur.com/ro20XSa.png', 'https://imgur.com/54CnE4P.png', 'https://imgur.com/0LmnSFK.png', 'https://imgur.com/M7UvICE.png']
+      },
+      {
+        name: 'Dashboard',
+        tags: [
+          {
+            name: 'Vue.js',
+            icon: 'vue-icon'
+          },
+          {
+            name: 'Bootstrap',
+            icon: 'bootstrap-icon'
+          }
+        ],
+        desc: 'Dashboard切版練習，主要練習自訂義chartjs的應用，有用到vue的custom directive功能製作右上角使用者功能列',
+        links: {
+          repo: 'https://github.com/eric840906/dashboardPractice',
+          demo: 'https://eric840906.github.io/dashboardPractice/#/login'
+        },
+        image: ['https://imgur.com/5KFwEpm.png', 'https://imgur.com/UQQhSHd.png', 'https://imgur.com/Zt6os4l.png']
       }
     ]
   }),
