@@ -295,6 +295,13 @@ export default {
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
+    @media (max-width: 768px) {
+      left: 50%;
+      top: unset;
+      bottom: -20px;
+      transform: rotate(90deg);
+      z-index: 999;
+    }
     .indicator+.indicator{
       margin-top: 10px;
     }
