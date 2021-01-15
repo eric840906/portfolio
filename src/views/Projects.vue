@@ -41,6 +41,7 @@ export default {
   },
   data: () => ({
     projectSelector: 0,
+    screenSize: undefined,
     project: [
       {
         name: 'Lächeln',
@@ -101,12 +102,17 @@ export default {
   methods: {
     changeSelector (i) {
       this.projectSelector = (this.projectSelector + this.project.length + i) % this.project.length
+    },
+    resizeHandle () {
+      this.screenSize = window.screen.availWidth
     }
   },
   updated () {
     const tl = gsap.timeline()
     gsap.from('.carousel-pic', { duration: 0.5, opacity: 0, x: -50, stagger: 0.1 })
-    gsap.fromTo('.display-pic', { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
+    if (this.screenSize > 768) {
+      gsap.fromTo('.display-pic', { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
+    }
     gsap.fromTo(this.$refs.tag, {
       opacity: 0,
       x: gsap.utils.random(-500, 500),
@@ -138,6 +144,9 @@ export default {
       const scroll = e.deltaY === -100 ? this.changeSelector(-1) : this.changeSelector(1)
       return scroll
     })
+  },
+  created () {
+    this.resizeHandle()
   },
   computed: {
     splitTitle () {
@@ -185,10 +194,10 @@ export default {
     justify-content: space-around;
     margin-top: 80px;
     border-top: 1px solid #ffffff54;
-    border-bottom: 1px solid #ffffff54;
     margin-top: auto;
     @media (max-width: 768px) {
       margin-bottom: 0;
+      border-bottom: 1px solid #ffffff54;
       a{
         font-size: 1rem;
       }
