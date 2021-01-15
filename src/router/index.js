@@ -5,6 +5,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    // 預防使用者因為輸入不存在的路徑跑到空白頁面
+    path: '*',
+    redirect: '/'
+  },
+  {
     path: '/',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
