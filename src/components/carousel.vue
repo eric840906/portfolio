@@ -92,12 +92,13 @@ export default {
 
 <style lang="scss" scoped>
 .project-pic{
+  padding: 10px 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   img{
-    width: 80%;
+    width: 100%;
     align-self: center;
     border-radius: 10px;
     cursor: pointer;
@@ -112,6 +113,10 @@ export default {
   h2{
     font-size: 1.5rem;
     font-weight: 600;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      font-weight: bolder;
+    }
   }
   .pic-carousel{
     display: flex;

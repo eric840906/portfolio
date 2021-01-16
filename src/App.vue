@@ -111,13 +111,11 @@ export default {
   watch: {
     $route (to, from) {
       document.querySelector('.glass-window').style.overflow = 'hidden'
-      console.log('hidden now')
     }
   },
   updated () {
     setTimeout(() => {
       document.querySelector('.glass-window').style.overflow = 'auto'
-      console.log('set to visible')
     }, 1300)
   }
 }
@@ -169,6 +167,10 @@ export default {
     left: 70%;
     width: 300px;
     height: 300px;
+    @media (max-width: 425px) {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 .switch-enter-active, .switch-leave-active {

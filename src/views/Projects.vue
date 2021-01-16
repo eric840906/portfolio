@@ -148,9 +148,9 @@ export default {
     }, { opacity: 1, x: 0, y: 0, z: 0, duration: 1, rotate: 0, stagger: 0.1 })
     tl.fromTo(this.$refs.splitDesc, {
       opacity: 0,
-      x: gsap.utils.random(-500, -300),
-      y: gsap.utils.random(-500, -300)
-    }, { opacity: 1, x: 0, y: 0, duration: 0.5, stagger: 0.05 }, '-=2')
+      rotate: gsap.utils.random(180, 30),
+      y: -50
+    }, { opacity: 1, rotate: 0, y: 0, duration: 0.5, stagger: 0.05 }, '-=2')
   },
   mounted () {
     window.addEventListener('wheel', (e) => {
@@ -297,10 +297,8 @@ export default {
     transform: translateY(-50%);
     @media (max-width: 768px) {
       left: 50%;
-      top: unset;
-      bottom: -20px;
-      transform: rotate(90deg);
-      z-index: 999;
+      top: -20px;
+      transform: rotate(270deg);
     }
     .indicator+.indicator{
       margin-top: 10px;
