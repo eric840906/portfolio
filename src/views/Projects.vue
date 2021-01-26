@@ -223,6 +223,7 @@ export default {
     }
     a{
       display: inline-block;
+      position: relative;
       padding: 10px;
       font-size: 24px;
       color: #2830ba8f;
@@ -230,6 +231,18 @@ export default {
       text-align: center;
       transition: 0.3s ease all;
       font-weight: bolder;
+      overflow: hidden;
+      &::before{
+        content: ' ';
+        background-color: #ffffff80;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: skew(45deg) translateX(300px);
+        transition: transform 0.5s ease;
+      }
       @media (max-width: 768px) {
         font-size: 1rem;
       }
@@ -238,8 +251,10 @@ export default {
       }
       &:hover{
         color: #ffffffad;
-        background: #00000038;
-        box-shadow: inset 0 0px 14px 2px #ffffff87;
+        box-shadow: inset 0 0px 14px 2px #ffffff80;
+        &::before{
+          transform: skew(45deg) translateX(-100%);
+        }
       }
     }
   }

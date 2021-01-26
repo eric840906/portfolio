@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navbar></Navbar>
+    <div class="wave"></div>
     <div class="bubble circle"></div>
     <div class="bubble circle"></div>
     <div class="bubble circle"></div>
@@ -22,6 +23,13 @@ export default {
     Navbar
   },
   mounted () {
+    document.addEventListener('mousemove', (event) => {
+      gsap.to('.wave', {
+        x: event.pageX,
+        y: event.pageY,
+        stagger: -0.1
+      })
+    })
     gsap.from('.glass-window', { duration: 3, scale: 0.5, ease: 'elastic' })
     const object = {
       el: '.circle',
@@ -172,16 +180,49 @@ export default {
       height: 100px;
     }
   }
-}
-.switch-enter-active, .switch-leave-active {
-  transition: all 1s ease;
-}
-.switch-enter, .switch-leave-to{
-  opacity: 0;
-  transform: translateY(5%);
-}
-.switch-enter-to, .switch-leave{
-  opacity: 1;
-}
+  .wave{
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width:40px;
+    height:40px;
+    border-radius:100%;
+    background: rgba(255,255,255,0.3);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+  }
+  // .wave3{
+  //   z-index:3;
+  //   background-size:auto 90%;
+  //   animation:w infinite 0.8s forwards;
+  // }
+  // .wave2{
+  //   z-index:4;
+  //   background-size:auto 80%;
+  //   animation:w infinite 1s forwards;
+  // }
+  @keyframes w{
+    0%{
+      width:1px;
+      height:1px;
+    }
+    100%{
+      width:80px;
+      height:80px;
+    }
+  }
+  }
+  .switch-enter-active, .switch-leave-active {
+    transition: all 1s ease;
+  }
+  .switch-enter, .switch-leave-to{
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  .switch-enter-to, .switch-leave{
+    opacity: 1;
+  }
 
 </style>
