@@ -53,7 +53,7 @@ export default {
     gsap.registerPlugin(TextPlugin)
     const tl = gsap.timeline()
     tl.from('#my-pic', { duration: 1, rotation: -180, opacity: 0, scale: 0.1 })
-    tl.from('.social-media svg', { duration: 1, y: 'random(-100%, 100%)', opacity: 0, stagger: 0.33 })
+    // tl.from('.social-media svg', { duration: 1, y: 'random(-100%, 100%)', opacity: 0, stagger: 0.33 })
     tl.from('#my-name', { duration: 1, text: '' }, '-=1')
     tl.from('#my-position', { duration: 1, text: '' })
     tl.from('#my-email', { duration: 2, text: '' }, '-=1.8')
@@ -81,6 +81,41 @@ export default {
   a{
     color:#2830ba8f;
   }
+  .media-icon{
+    overflow: hidden;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    .material-design-icon{
+      svg{
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &::before{
+      content: ' ';
+      background-color: #ffffff80;
+      width: 50px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      transform: skew(45deg) translateX(200%);
+      transition: transform 0.5s ease;
+    }
+    &:hover{
+      box-shadow: inset 0px 0px 1px 1px #ffffff80;
+      .material-design-icon{
+        svg{
+          animation: shake 0.5s ease-in 0.1s;
+        }
+      }
+      &::before{
+        transform: skew(45deg) translateX(-220%);
+      }
+    }
+  }
   .media-icon+.media-icon{
     margin-left: 10px;
   }
@@ -95,6 +130,33 @@ export default {
   }
   @media (max-width: 425px) {
     width: 35vh;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(45deg);
+  }
+  20% {
+    transform: rotate(-40deg);
+  }
+  40% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-25deg);
+  }
+  80% {
+    transform: rotate(15deg)
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  95% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 </style>

@@ -190,7 +190,7 @@ export default {
     border-radius:100%;
     background: rgba(255,255,255,0.3);
     transform: translate(-50%, -50%);
-    z-index: 999;
+    z-index: 0;
     backdrop-filter: drop-shadow(4px 4px 10px blue);
   }
   // .wave3{

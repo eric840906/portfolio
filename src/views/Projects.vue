@@ -211,9 +211,8 @@ export default {
   .btn-box{
     display: flex;
     justify-content: space-around;
-    margin-top: 80px;
-    border-top: 1px solid #ffffff54;
     margin-top: auto;
+    border-top: 1px solid #ffffff54;
     @media (max-width: 768px) {
       margin-bottom: 0;
       border-bottom: 1px solid #ffffff54;
@@ -240,7 +239,7 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        transform: skew(45deg) translateX(300px);
+        transform: skew(45deg) translateX(330px);
         transition: transform 0.5s ease;
       }
       @media (max-width: 768px) {
@@ -251,9 +250,9 @@ export default {
       }
       &:hover{
         color: #ffffffad;
-        box-shadow: inset 0 0px 14px 2px #ffffff80;
+        box-shadow: inset 0px 1px 1px 1px #ffffff80;
         &::before{
-          transform: skew(45deg) translateX(-100%);
+          transform: skew(45deg) translateX(-150%);
         }
       }
     }

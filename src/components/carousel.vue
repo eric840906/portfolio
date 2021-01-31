@@ -124,6 +124,31 @@ export default {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
+    .col-md-4{
+      overflow: hidden;
+      padding: 0;
+      img{
+        padding: 5px;
+      }
+      &::before{
+        content: ' ';
+        background-color: #ffffff80;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        transform: skew(45deg) translateX(1000%);
+        transition: transform 0.5s ease;
+      }
+      &:hover{
+        box-shadow: inset 0px 0px 1px 1px #ffffff80;
+        &::before{
+          transform: skew(45deg) translateX(-220%);
+        }
+      }
+    }
     @media (max-width: 768px) {
       overflow: auto;
     }
@@ -134,6 +159,15 @@ export default {
         justify-content: center;
         img{
           width: 100%;
+        }
+        &::before{
+          transform: skew(45deg) translateX(1574%);
+        }
+        &:hover{
+          box-shadow: inset 0px 0px 1px 1px #ffffff80;
+          &::before{
+            transform: skew(45deg) translateX(-320%);
+          }
         }
       }
     }
