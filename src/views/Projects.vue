@@ -152,18 +152,18 @@ export default {
       y: -50
     }, { opacity: 1, rotate: 0, y: 0, duration: 0.5, stagger: 0.05 }, '-=2')
   },
-  mounted () {
-    window.addEventListener('wheel', (e) => {
-      const scroll = e.deltaY === -100 ? this.changeSelector(-1) : this.changeSelector(1)
-      return scroll
-    })
-  },
-  destroyed () {
-    window.addEventListener('wheel', (e) => {
-      const scroll = e.deltaY === -100 ? this.changeSelector(-1) : this.changeSelector(1)
-      return scroll
-    })
-  },
+  // mounted () {
+  //   window.addEventListener('wheel', (e) => {
+  //     const scroll = e.deltaY === -100 ? this.changeSelector(-1) : this.changeSelector(1)
+  //     return scroll
+  //   })
+  // },
+  // destroyed () {
+  //   window.addEventListener('wheel', (e) => {
+  //     const scroll = e.deltaY === -100 ? this.changeSelector(-1) : this.changeSelector(1)
+  //     return scroll
+  //   })
+  // },
   created () {
     this.resizeHandle()
   },
