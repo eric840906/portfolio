@@ -268,7 +268,7 @@ export default {
   }
   .project-desc{
     border-top: 1px solid #ffffff54;
-    padding-top: 2.5em;
+    padding: 2em 0px;
     display: flex;
     flex-direction: column;
     p{
@@ -286,8 +286,7 @@ export default {
   }
   .project-skill{
     border-top: 1px solid #ffffff54;
-    padding-top: 2em;
-    margin-bottom: 10em;
+    padding: 2em 0px;
     @media (max-width: 768px) {
       margin-bottom: 2em;
     }
